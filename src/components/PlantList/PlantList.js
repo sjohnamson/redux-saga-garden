@@ -4,11 +4,11 @@ import { useDispatch, useSelector} from 'react-redux';
 
 function PlantList() {
     const dispatch = useDispatch();
-
+    
     const reduxState = useSelector(store => store);
 
     useEffect(() => {
-        console.log('component did mount');
+        dispatch({ type: 'FETCH_FLOWERS' })
         // dispatch an action to request the plantList from the API
     }, []); 
 
